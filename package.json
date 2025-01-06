@@ -1,6 +1,6 @@
 {
     "name": "coolice",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "",
     "author": "softwarexplus",
     "homepage": "https://github.com/softwarexplus/coolice#readme",
@@ -10,7 +10,7 @@
         "fmt": "prettier --config=.prettierrc --write src/",
         "lint": "prettier --config=.prettierrc --check src/",
         "build": "(node --eval \"require('node:fs').rmSync('out', { recursive: true, force: true })\" || true) && tsc",
-        "test": "tsc --noEmit",
+        "test": "tsc --noEmit && vitest run --root=src",
         "dev": "tsc --watch"
     },
     "keywords": [
@@ -33,6 +33,7 @@
         "tag": "latest"
     },
     "devDependencies": {
-        "@types/node": "^22.10.5"
+        "@types/node": "^22.10.5",
+        "vitest": "^2.1.8"
     }
 }

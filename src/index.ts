@@ -1,1 +1,3 @@
-export function appendJSON(arg: any) {}
+export { version } from "../package.json"
+export * from "./append"
+export * from "./type"
