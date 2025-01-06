@@ -1,3 +1,1 @@
-export default function Cool() {
-    return "Cool"
-}
+export function appendJSON(arg: any) {}

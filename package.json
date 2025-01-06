@@ -1,29 +1,38 @@
 {
     "name": "coolice",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "",
-    "author": "SoftwareX Plus <SoftwareXPlus@outlook.com>",
-    "homepage": "https://github.com/softwarexplus/CoolIce#readme",
+    "author": "softwarexplus",
+    "homepage": "https://github.com/softwarexplus/coolice#readme",
     "main": "out/index.js",
     "license": "MIT",
-    "keywords": [],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "fmt": "prettier --config=.prettierrc --write src/",
+        "lint": "prettier --config=.prettierrc --check src/",
+        "build": "(node --eval \"require('node:fs').rmSync('out', { recursive: true, force: true })\" || true) && tsc",
+        "test": "tsc --noEmit",
+        "dev": "tsc --watch"
     },
+    "keywords": [
+        "coolice"
+    ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/softwarexplus/CoolIce.git"
+        "url": "https://github.com/softwarexplus/coolice"
     },
     "bugs": {
-        "url": "https://github.com/softwarexplus/CoolCake/issues",
-        "email": "SoftwareXPlus@outlook.com"
+        "url": "https://github.com/softwarexplus/coolice/issues",
+        "email": "SoftwareXPlus@gmail.com"
     },
     "funding": {
         "type": "patreon",
-        "url": "https://www.patreon.com/SoftwareXPlus"
+        "url": "https://www.patreon.com/xcfio"
     },
     "publishConfig": {
         "access": "public",
         "tag": "latest"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.5"
     }
 }
