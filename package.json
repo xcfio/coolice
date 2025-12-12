@@ -33,7 +33,7 @@
         "tag": "latest"
     },
     "devDependencies": {
-        "@types/node": "^24.0.1",
+        "@types/node": "^25.0.0",
         "vitest": "^4.0.2"
     }
 }
